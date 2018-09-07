@@ -1,4 +1,4 @@
-import slider from './slider.vue'
+import slider from './ca-slider-pc.vue'
 
 const CaSliderPC = {
     install: function(vue) {
