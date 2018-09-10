@@ -76,16 +76,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
+// 通过定义外层div的宽高来控制轮播组件尺寸
 .slider-demo {
   width: 1400px;
   height: 500px;
   border: 1px solid #e5e5e5;
   margin: 0 auto;
   background-color: #fff;
-
-  .slider-image {
-    width: 100%;
-  }
 }
 </style>
 ```
