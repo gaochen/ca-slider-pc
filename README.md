@@ -16,25 +16,21 @@ npm install ca-slider-pc --save
 
 ```javascript
 // main.js
-import CaSliderPC from 'ca-slider-pc'
-Vue.use(CaSliderPC)
+import CaSliderPc from 'ca-slider-pc'
+Vue.use(CaSliderPc)
 ```
 
-<!-- #### mount with component
+#### mount with component
 
 ```javascript
-// require styles
-import 'swiper/dist/css/swiper.css'
-
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { CaSliderPc } from 'ca-slider-pc'
 
 export default {
   components: {
-    swiper,
-    swiperSlide
+    CaSliderPc
   }
 }
-``` -->
+```
 
 ### SPA
 
@@ -42,8 +38,8 @@ export default {
 <template>
   <div class="hello">
     <div class="slider-demo">
-      <CaSliderPC :options="options" :dataList="urlList">
-      </CaSliderPC>
+      <ca-slider-pc :options="options" :dataList="urlList">
+      </ca-slider-pc>
     </div>
   </div>
 </template>
@@ -64,7 +60,7 @@ export default {
         perView: 1, // 一屏多少个图片
         spaceBetween: 0, // 图片的间距
         index: 0, // 轮播起始位置
-        autoPlay: true, // 是否自动播放，需要先看起无缝滚动,
+        autoPlay: true, // 是否自动播放，需要先开启无缝滚动,
         autoSpeed: 2500, // 自动播放的时间间隔
         loop: true, // 无缝滚动
         drag: true, // 是否鼠标可拖动

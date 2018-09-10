@@ -1,12 +1,15 @@
-import slider from './ca-slider-pc.vue'
+import CaSliderPc from './ca-slider-pc.vue'
 
-const CaSliderPC = {
-    install: function(Vue) {
-        if (typeof window !== 'undefined' && window.Vue) {
-            Vue = window.Vue
-        }
-        Vue.component('CaSliderPC', slider)
+const install = function(Vue) {
+    if (typeof window !== 'undefined' && window.Vue) {
+        Vue = window.Vue
     }
+    Vue.component('ca-slider-pc', CaSliderPc)
 }
 
-export default CaSliderPC
+const VueCaSlider = {
+    install
+}
+
+export default VueCaSlider
+export { CaSliderPc }
