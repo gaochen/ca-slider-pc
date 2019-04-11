@@ -5,7 +5,11 @@ const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
   entry: NODE_ENV == 'development' ? './src/main.js' : './src/myPlugin/slider/index.js',
-  output: {
+  output: NODE_ENV == 'development' ? {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'build.js'
+  } : {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'ca-slider-pc.min.js',
